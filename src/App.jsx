@@ -18,7 +18,6 @@ function App() {
         <Terms />
         <ContentPage />
         <BurgerList />
-
     </div>
   );
 }

@@ -1,0 +1,34 @@
+:root {
+    --grey--details: rgb(112, 109, 109);
+}
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 3rem;
+}
+
+.homePageLogoPlace {
+    background-color: rgb(167, 240, 221);
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    border: 0.15rem solid  var(--grey--details);
+}
+
+.homePageLogo {
+    height: 60px;
+    width: 60px;
+}
+
+.homePageTitle {
+    padding: 1rem 0 5.5rem 0;
+}
+
+.homePageButton {
+    padding: 0.5rem 1rem;
+    border:  0.15rem solid  var(--grey--details);
+    border-radius: 10px;
+    cursor: pointer;
+}
