@@ -1,0 +1,10 @@
+.switchingDotsPlace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.switchingDots {
+    margin-bottom: 1.5rem;
+    width: 25px;
+    height: 25px;
+}
