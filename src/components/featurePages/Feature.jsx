@@ -1,16 +1,12 @@
-import style from './Feature.module.css';
-import { Feature1 } from './feature1/Feature1';
-import { Feature2 } from './feature2/Feature2';
-import { Feature3 } from './feature3/Feature3';
+import { FeatureTemplate } from "./FeatureTemplate";
 
-
-
-export function Feature() {
+export function Feature({featureData}) {
     return (
-        <div className={style.feature}>
-            < Feature1 />
-            < Feature2 />
-            < Feature3 />
+        <div>
+            <FeatureTemplate featureTemplateData={featureData[0]} />
+            <FeatureTemplate featureTemplateData={featureData[1]} />
+            <FeatureTemplate featureTemplateData={featureData[2]} />
         </div>
+
     )
 }
