@@ -1,0 +1,14 @@
+.checkBox {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.termsTitle label {
+    font-size: 1rem;
+}
+
+.termsLabel {
+    font-size: 0.8rem;
+}

@@ -2,8 +2,7 @@ import './App.css';
 import { BurgerList } from './components/burgerList/BurgerList';
 import { ContentPage } from './components/contentPage/ContentPage';
 import { Terms } from './components/termsPage/Terms';
-import { Login }  from './components/loginPage/Login';
-import { Registration }  from './components/registrationPage/Registration';
+import { RegistrationAndLogin } from './components/registrationAndLogin/RegistrationAndLogin';
 import { Feature }  from './components/featurePages/Feature';
 import { HomePage }  from './components/homePage/HomePage';
 
@@ -28,14 +27,26 @@ const data1 = [
   }
 ]
 
+const data2 = [
+  {
+    titleOfPage: 'Create Your account',
+    button1: 'Register',
+    button2: 'Login'
+  },
+  {
+    titleOfPage: 'Log in to your account',
+    button1: 'Log in',
+    button2: 'Register'
+  }
+]
+
 
 function App() {
   return (
     <div className='app'>
         <HomePage />
         <Feature featureData={data1} />
-        <Registration />
-        <Login />
+        <RegistrationAndLogin registrationAndLoginData={data2} />
         <Terms />
         <ContentPage />
         <BurgerList />

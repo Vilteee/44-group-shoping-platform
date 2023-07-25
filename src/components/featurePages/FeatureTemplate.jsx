@@ -17,7 +17,7 @@ export function FeatureTemplate({featureTemplateData:{featurePhoto, featureTitle
             <h2 className={style.featureTitle}>{featureTitle}</h2>
             <p className={style.featureText}>{featuteText}</p>
             <SwitchingDots />
-            <button className={style1.button}>{featureButton}</button>
+            <button type='submit' className={style1.button}>{featureButton}</button>
         </div>
     )
 }
