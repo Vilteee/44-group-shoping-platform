@@ -1,10 +1,12 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BurgerList } from './components/burgerList/BurgerList';
 import { ContentPage } from './components/contentPage/ContentPage';
-import { Terms } from './components/termsPage/Terms';
+import { TermsOfService } from './components/termsOfService/TermsOfService';
 import { RegistrationAndLogin } from './components/registrationAndLogin/RegistrationAndLogin';
 import { Feature }  from './components/featurePages/Feature';
 import { HomePage }  from './components/homePage/HomePage';
+
 
 const data1 = [
   {
@@ -47,7 +49,7 @@ function App() {
         <HomePage />
         <Feature featureData={data1} />
         <RegistrationAndLogin registrationAndLoginData={data2} />
-        <Terms />
+        <TermsOfService />
         <ContentPage />
         <BurgerList />
     </div>

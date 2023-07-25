@@ -1,0 +1,44 @@
+.contentPageMain {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.pageContentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.burgerButton {
+    display: inline-block;
+    width: 70px;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: #000; 
+    position: absolute;
+
+
+}
+
+.bar:nth-child(1) {
+    top: -2px;
+    margin-bottom: 0.5rem;
+}
+  
+.bar:nth-child(2) {
+    top: 8px;
+    margin-top: 0.2rem;
+}
+  
+.bar:nth-child(3) {
+    top: 16px;
+    margin-top: 0.5rem;
+}

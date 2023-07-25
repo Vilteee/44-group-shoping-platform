@@ -10,7 +10,7 @@ export function HomePage() {
     return (
         <div className={style.homePage}>
             <div className={style.homePageLogoPlace}>
-            <GiWaveSurfer className={style.homePageLogo} />
+                <GiWaveSurfer className={style.homePageLogo} />
             </div>
             <h1 className={style.homePageTitle}>Surfer needs</h1>
             <button className={style1.button}>Get started</button>

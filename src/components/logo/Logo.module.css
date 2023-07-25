@@ -1,0 +1,14 @@
+.homePageLogoPlace {
+    background-color: rgb(167, 240, 221);
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    border: 0.15rem solid  var(--grey--details);
+    width: 18%;
+}
+
+.homePageLogo {
+    height: 30px;
+    width: 30px;
+}

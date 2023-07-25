@@ -1,0 +1,18 @@
+.termsOfService {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+}
+
+.termsOfServiceh3 {
+    margin: 2rem 0 1rem;
+}
+
+.termsOfServiceText2 {
+    margin-bottom: 4rem;
+}
+
+#button2 {
+    width: 100%;
+
+}
