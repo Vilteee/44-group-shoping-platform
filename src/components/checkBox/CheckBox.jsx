@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import style from './CheckBox.module.css';
 
 
@@ -11,7 +12,7 @@ export function CheckBox() {
                 <label for="terms">Agree to our TOS</label>
             </div>
             <div>
-                <a href="/" className={style.termsLabel}>(read)</a>
+                <Link to='/terms' className={style.termsLabel}>(read)</Link>
             </div>
         </div>
     )

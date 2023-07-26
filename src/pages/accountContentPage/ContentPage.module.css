@@ -1,0 +1,13 @@
+.contentPageMain {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.pageContentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
