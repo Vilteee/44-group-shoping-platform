@@ -1,0 +1,11 @@
+.shopListItems {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.dotIcon {
+    width: 27px;
+    height: 27px;
+    margin-right: 0.5rem;
+}

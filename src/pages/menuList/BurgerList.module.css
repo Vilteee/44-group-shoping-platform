@@ -1,0 +1,19 @@
+
+.burgerList {
+    margin: 1rem 3rem 2rem;
+}
+
+.listDots {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 0.12rem solid black;
+   
+}
+
+#listDotsLast {
+    border-bottom: none;
+}
+
