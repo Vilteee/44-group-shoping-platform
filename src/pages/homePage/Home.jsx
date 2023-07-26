@@ -5,7 +5,7 @@ import { GiWaveSurfer } from 'react-icons/gi';
 
 
 
-export function HomePage() {
+export function Home() {
     console.log(style1.button);
     return (
         <div className={style.homePage}>

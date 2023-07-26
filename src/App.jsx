@@ -1,33 +1,18 @@
-import './App.css';
+import  style from './App.module.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BurgerList } from './components/burgerList/BurgerList';
 import { ContentPage } from './components/contentPage/ContentPage';
 import { TermsOfService } from './components/termsOfService/TermsOfService';
 import { RegistrationAndLogin } from './components/registrationAndLogin/RegistrationAndLogin';
-import { Feature }  from './components/featurePages/Feature';
-import { HomePage }  from './components/homePage/HomePage';
+import { Page404 } from './pages/Page404';
+import { LayoutAccount} from './layout/LayoutAccount';
+import { LayoutAuth} from './layout/LayoutAuth';
+import { LayoutList } from './layout/LayoutList;'
+import { Home} from '/pages/homePage/Home'
+import { Feature } from './pages/featurePages/Feature';
 
 
-const data1 = [
-  {
-    featurePhoto: './img/board.png',
-    featureTitle: 'Choose best for You',
-    featuteText: 'We offer different kinds of surfboards and their accessories depending of Your skills, body composition, surfing location properties, weather conditons',
-    featureButton: 'Continue'
-  },
-  {
-    featurePhoto: './img/mysticSuit.png',
-    featureTitle: 'Suitable water wear',
-    featuteText: 'You will find many tranding, quality, practical, tested hydrosuits. High class brands have stored clothes for users of all ages, sizes, individual properties.',
-    featureButton: 'Continue'
-  },
-  {
-    featurePhoto: './img/surfLifestyle.png',
-    featureTitle: ' Responsible surf lifestyle apparel',
-    featuteText: 'Get comfortable clothes from socks to hats appropriate for staying by the sea. All of the are made from good materials, when You nedd quick dry and warming after surfing.',
-    featureButton: 'Register'
-  }
-]
+
 
 const data2 = [
   {
@@ -43,17 +28,51 @@ const data2 = [
 ]
 
 
+// function App() {
+//   return (
+//     <div className='app'>
+//         <HomePage />
+//         <Feature featureData={data1} />
+//         <RegistrationAndLogin registrationAndLoginData={data2} />
+//         <TermsOfService />
+//         <ContentPage />
+//         <BurgerList />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
 function App() {
   return (
-    <div className='app'>
-        <HomePage />
-        <Feature featureData={data1} />
-        <RegistrationAndLogin registrationAndLoginData={data2} />
-        <TermsOfService />
-        <ContentPage />
-        <BurgerList />
+    <div className={style.app}>
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/feature/:featureId" element={<Feature />} />
+          <Route path="*" element={<Page404 />} />
+
+          <Route Component={LayoutAuth}>
+            <Route path="/login" element={ <RegistrationAndLogin registrationAndLoginData={data2} />} />
+            <Route path="/registration" element={ <RegistrationAndLogin registrationAndLoginData={data2} />} />
+            <Route path="/terms" element={<TermsOfService /> } />
+          </Route>
+
+          <Route Component={LayoutAccount}>
+            <Route index path="/account" element={<ContentPage />} />
+          </Route>
+
+          <Route Component={LayoutList}>
+            <Route index path="/menulist" element={<BurgerList />} />
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
 
 export default App;
+
