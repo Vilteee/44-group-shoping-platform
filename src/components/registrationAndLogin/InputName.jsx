@@ -1,4 +1,4 @@
-import style from './RegistrationAndLogin.module.css';
+import style from '../../pages/registrationAndLogin/RegistrationAndLogin.module.css';
 import { useState } from 'react';
 
 

@@ -1,15 +1,13 @@
 import  style from './App.module.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { BurgerList } from './components/burgerList/BurgerList';
 import { ContentPage } from './pages/accountContentPage/ContentPage';
 import { LayoutAccount} from './layout/LayoutAccount';
-import { LayoutList } from './layout/LayoutList;'
-import { Home} from '/pages/homePage/Home'
+import { Home } from './pages/homePage/Home'
 import { Feature } from './pages/featurePages/Feature';
-import { NoPage } from './pages/NoPage/Page404';
+import { NoPage } from './pages/noPage/Page404';
 import { Login } from './pages/registrationAndLogin/Login';
 import { Registration } from './pages/registrationAndLogin/Registration';
-import { TermsOfService } from '.pages/terms/TermsOfService';
+import { TermsOfService } from './pages/terms/TermsOfService';
 
 
 
@@ -48,9 +46,9 @@ function App() {
             <Route path="/account" element={<ContentPage />} />
           </Route>
 
-          <Route Component={LayoutList}>
-            <Route path="/menulist" element={<BurgerList />} />
-          </Route>
+          {/* <Route Component={LayoutList}>
+            <Route path="/menuList/:menuListId" element={<BurgerList />} />
+          </Route> */}
 
         </Routes>
       </BrowserRouter>

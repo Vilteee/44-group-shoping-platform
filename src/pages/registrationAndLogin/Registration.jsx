@@ -1,6 +1,6 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import style from './RegistrationAndLogin.module.css';
-import style1 from '../button/Button.module.css';
+import style1 from '../../components/button/Button.module.css'
 import { InputName } from '../../components/registrationAndLogin/InputName';
 import { InputEmail } from '../../components/registrationAndLogin/InputEmail';
 import { InputPassword } from '../../components/registrationAndLogin/InputPassword';
@@ -10,8 +10,8 @@ import { registrationAndLoginData } from '../../data/registrationAndLoginData';
 
 
 export function Registration() {
-    const { registration } = useParams();
-    const registrationData = registrationAndLoginData.filter(auth => auth.id === registration )[0]
+    const { pathname } = useLocation();
+    const registrationData = registrationAndLoginData.filter(auth => auth.id === pathname)[0]
 
     return (
         <div className={style.registrationAndLogin}>
