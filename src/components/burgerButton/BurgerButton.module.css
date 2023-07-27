@@ -4,6 +4,8 @@
     height: 60px;
     cursor: pointer;
     position: relative;
+    background-color: white;
+    border:none;
 }
 
 .bar {

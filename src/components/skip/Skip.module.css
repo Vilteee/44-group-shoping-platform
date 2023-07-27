@@ -1,3 +1,8 @@
 .skip {
     padding: 3rem 0  3rem 17rem;
+    color:rgb(44, 168, 162);
+}
+
+.skip:hover {
+    color:rgb(144, 86, 219);
 }

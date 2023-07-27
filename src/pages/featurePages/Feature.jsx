@@ -20,12 +20,13 @@ export function Feature() {
 
     return (
         <div className={style.feature}>
-            <Skip />
+            <Link to={getPath()} className={style.linkSkip}><Skip /></Link>
             <img className={style.featureImg} src={feature.featurePhoto} alt="featurePhoto" />
             <h2 className={style.featureTitle}>{feature.featureTitle}</h2>
             <p className={style.featureText}>{feature.featureText}</p>
-            <SwitchingDots />
+            <SwitchingDots index={featureId}/>
             <Link to={getPath()} className={style1.button}>{feature.featureButton}</Link>
         </div>
     )
 }
+

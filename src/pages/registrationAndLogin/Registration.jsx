@@ -17,6 +17,7 @@ export function Registration() {
         <div className={style.registrationAndLogin}>
             <div className={style.title}>
             <h2 >{registrationData.titleOfPage}</h2>
+            <div className={style.error}></div>
             </div>
             <form className={style.form}>
                 <InputName />

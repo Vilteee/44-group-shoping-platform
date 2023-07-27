@@ -21,3 +21,7 @@
     padding: 0 0.5rem 1.5rem;
     text-align: center;
 }
+
+.linkSkip {
+    text-decoration: none;
+}
