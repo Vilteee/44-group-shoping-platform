@@ -2,9 +2,7 @@ import style from '../../pages/registrationAndLogin/RegistrationAndLogin.module.
 import { useState } from 'react';
 
 
-export function InputPassword() {
-
-    const [password, setPassword] = useState('');
+export function InputPassword({password, setPassword}) {
 
     function updatePassword(event) {
         setPassword(event.target.value);

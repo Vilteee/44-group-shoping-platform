@@ -11,25 +11,6 @@ import { TermsOfService } from './pages/terms/TermsOfService';
 
 
 
-
-
-
-// function App() {
-//   return (
-//     <div className='app'>
-//         <HomePage />
-//         <Feature featureData={data1} />
-//         <RegistrationAndLogin registrationAndLoginData={data2} />
-//         <TermsOfService />
-//         <ContentPage />
-//         <BurgerList />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 function App() {
   return (
     <div className={style.app}>

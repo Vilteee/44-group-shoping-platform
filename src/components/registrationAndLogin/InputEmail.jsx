@@ -2,9 +2,8 @@ import style from '../../pages/registrationAndLogin/RegistrationAndLogin.module.
 import { useState } from 'react';
 
 
-export function InputEmail() {
+export function InputEmail({email, setEmail}) {
 
-    const [email, setEmail] = useState('');
     function updateEmail(event) {
         setEmail(event.target.value);
       }

@@ -1,13 +1,11 @@
 import style from '../../pages/registrationAndLogin/RegistrationAndLogin.module.css';
-import { useState } from 'react';
 
 
-export function InputName() {
+export function InputName({name, setName}) {
 
-    const [name, setName] = useState('');
     function updateName(event) {
         setName(event.target.value);
-      }
+    }
       
     return(
         <div className={style.row}>
