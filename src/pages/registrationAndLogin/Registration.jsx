@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import style from './RegistrationAndLogin.module.css';
 import style1 from '../../components/button/Button.module.css'
 import { InputName } from '../../components/registrationAndLogin/InputName';
@@ -11,19 +11,21 @@ import { useState, useEffect } from 'react';
 
 
 export function Registration() {
-
+    const navigate = useNavigate();
     const { pathname } = useLocation();
     const registrationData = registrationAndLoginData.filter(auth => auth.id === pathname)[0]
 
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
+    const [tosAgree, setTosAGree] = useState(false);
     const [errors, setErrors] = useState([]);
     const [users, setUsers] = useState(() => JSON.parse(localStorage.getItem('users')) || []);
 
     useEffect(() => {
         localStorage.setItem('users', JSON.stringify( users ));
-    }, [users]);
+
+    }, [users, navigate]);
 
 
     function registerUser(e) {
@@ -53,11 +55,16 @@ export function Registration() {
             newErrors.push('klaida: email...');
            
         }
+        if(!tosAgree) {
+            newErrors.push('klaida: nesutiko su taisyklem...');
+        
+        }
 
         setErrors(newErrors);
-
-        if ( !errors.length ) {
+        
+        if ( !newErrors.length ) {
             setUsers(( prev ) => [ ...prev, { name, password, email }]);
+            // navigate("/login");
         }
     }
 
@@ -73,8 +80,8 @@ export function Registration() {
                 <InputName name={name} setName={setName}/>
                 <InputEmail email={email} setEmail={setEmail}/>
                 <InputPassword password={password} setPassword={setPassword} />
-                <CheckBox />
-                <Link to='/login' className={style1.button} onClick={registerUser} >{registrationData.button1}</Link>
+                <CheckBox check={tosAgree} setCheck={setTosAGree}/>
+                <button className={style1.button} onClick={registerUser} >{registrationData.button1}</button>
                 <p>or</p>
                 <Link to='/login' className={style1.button} >{registrationData.button2}</Link>
             </form>

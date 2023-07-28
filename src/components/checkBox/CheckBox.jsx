@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import style from './CheckBox.module.css';
 
 
-export function CheckBox() {
+export function CheckBox({check, setCheck}) {
     return (
         <div className={style.checkBox}>
              <div> 
-                <input type="checkbox" id="terms" />
+                <input type="checkbox" id="terms" onChange={()=>{setCheck(!check)}}/>
             </div>
             <div className={style.termsTitle}>
                 <label for="terms">Agree to our TOS</label>
