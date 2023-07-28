@@ -6,7 +6,7 @@
 
 # Shoping-platform
 
-![projectStructureScheme](<img src='../../img/projectStructure.png alt='projectImg'/>)
+![projectStructureScheme](<img src='./src/img/projectStructure.png alt='projectImg'/>)
 
 _CRA project_
 
