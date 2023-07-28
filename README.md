@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
+![Security Status](https://img.shields.io/security-headers?label=Security&url=https%3A%2F%2Fgithub.com&style=flat-square)
+![Gluten Status](https://img.shields.io/badge/Gluten-Free-green.svg)
+![Eco Status](https://img.shields.io/badge/ECO-Friendly-green.svg)
+[![Discord](https://discord.com/api/guilds/571393319201144843/widget.png)](https://discord.gg/dRwW4rw)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Shoping-platform
 
-## Available Scripts
+<img src='../../img/projectStructure.png alt='projectImg'/>
 
-In the project directory, you can run:
+_CRA project_
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌟 About
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project is for educational porpuses only. Learning to creat app with react (cra).
 
-### `npm test`
+Site published at: https://vilteee.github.io/44-group-shoping-platform/.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Design: made by own developer.
 
-### `npm run build`
+## 🎯 Project features/goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Github repository
+-   Commits 20+
+-   Correct code order
+-   Design visuality
+-   Localstorage using
+-   Forms validation
+-   Pages creation and navigation
+-   Components making, 7+
+-   List generation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧰 Getting Started
 
-### `npm run eject`
+### 💻 Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npx create-react-app . - _install_
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+https://create-react-app.dev/docs/getting-started
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Git - _download and install_
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+https://git-scm.com
+```
 
-## Learn More
+### 🏃 Run locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Would like to run this project locally? Open terminal and follow these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repo
+    ```sh
+    git clone https://github.com/Vilteee/44-group-shoping-platform.git
+    ```
+2. Install NPM packages
+    ```sh
+    npm i
+    ```
+    or
+    ```sh
+    npm install
+    ```
+3. Run the server
+    ```sh
+    npm run start
+    ```
 
-### Code Splitting
+### 🧪 Running tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+There is no tests for this project.
 
-### Analyzing the Bundle Size
+## 🎅 Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Viltė : [Github](https://github.com/Vilteee)
 
-### Making a Progressive Web App
+## ⚠️ License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Distributed under the MIT License. See LICENSE.txt for more information.
 
-### Advanced Configuration
+## 🔗 Other resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+No other resources.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
