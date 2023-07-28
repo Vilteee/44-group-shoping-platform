@@ -20,7 +20,7 @@ export function Feature() {
 
     return (
         <div className={style.feature}>
-            <Link to={getPath()} className={style.linkSkip}><Skip /></Link>
+            <Link to='/registration' className={style.linkSkip}><Skip /></Link>
             <img className={style.featureImg} src={feature.featurePhoto} alt="featurePhoto" />
             <h2 className={style.featureTitle}>{feature.featureTitle}</h2>
             <p className={style.featureText}>{feature.featureText}</p>
