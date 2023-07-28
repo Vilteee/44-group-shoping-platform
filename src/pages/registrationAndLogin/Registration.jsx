@@ -6,8 +6,7 @@ import { InputEmail } from '../../components/registrationAndLogin/InputEmail';
 import { InputPassword } from '../../components/registrationAndLogin/InputPassword';
 import { CheckBox } from '../../components/checkBox/CheckBox';
 import { registrationAndLoginData } from '../../data/registrationAndLoginData';
-import { useState } from 'react';
-import userEvent from '@testing-library/user-event';
+import { useState, useEffect } from 'react';
 
 
 
@@ -20,8 +19,12 @@ export function Registration() {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [errors, setErrors] = useState([]);
+    const [users, setUsers] = useState(() => JSON.parse(localStorage.getItem('users')) || []);
 
-  
+    useEffect(() => {
+        localStorage.setItem('users', JSON.stringify( users ));
+    }, [users]);
+
 
     function registerUser(e) {
         const minUserNameLength = 2;
@@ -32,7 +35,6 @@ export function Registration() {
         const maxEmailLength = 100;
 
         e.preventDefault();
-
 
 
        const newErrors = [];
@@ -55,13 +57,8 @@ export function Registration() {
         setErrors(newErrors);
 
         if ( !errors.length ) {
-            console.log('register...')
-            console.log({name, password, email});
+            setUsers(( prev ) => [ ...prev, { name, password, email }]);
         }
-
-
-        console.log(errors);
-        console.log('register...');
     }
 
     return (
@@ -83,5 +80,4 @@ export function Registration() {
             </form>
         </div>
     )
-    
 }
