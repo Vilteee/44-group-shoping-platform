@@ -8,7 +8,7 @@ export function LayoutAccount() {
         <div className={style.pageContent}>
             <header className={style.pageContentHeader}>
                 <Logo/>
-                <Link to='/menulist'><BurgerButton /></Link>
+                <Link to='/menu-list'><BurgerButton /></Link>
             </header>
             <Outlet />
         </div>

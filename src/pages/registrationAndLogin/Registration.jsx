@@ -39,21 +39,23 @@ export function Registration() {
        const newErrors = [];
 
         if(name.length < minUserNameLength || name.length > maxUserNameLength) {
-            newErrors.push('klaida: userName...');
+            newErrors.push('mistake: userName...');
            
         }
 
         if(password.length < minPasswordLength || password.length > maxPasswordLength ) {
-            newErrors.push('klaida: password...');
+            newErrors.push('mistake: password...');
             
         }
-        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        
         if(!email.match(validRegex)) {
-            newErrors.push('klaida: email...');
+            newErrors.push('mistake: email...');
            
         }
         if(!tosAgree) {
-            newErrors.push('klaida: nesutiko su taisyklem...');
+            newErrors.push('mistake: do not agreed with TOS');
         
         }
 
