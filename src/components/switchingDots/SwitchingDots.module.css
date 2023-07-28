@@ -10,5 +10,8 @@
 }
 
 .dotWithColor {
-    color: rgb(236, 49, 55);
+    color: green;
+    margin-bottom: 1.5rem;
+    width: 25px;
+    height: 25px;
 }
