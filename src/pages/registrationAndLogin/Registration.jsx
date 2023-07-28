@@ -50,8 +50,8 @@ export function Registration() {
             newErrors.push('klaida: password...');
             
         }
-
-        if(email.length < minEmailLength || email.length > maxEmailLength ) {
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(!email.match(validRegex)) {
             newErrors.push('klaida: email...');
            
         }
