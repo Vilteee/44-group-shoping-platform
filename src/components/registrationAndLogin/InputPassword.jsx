@@ -1,5 +1,4 @@
 import style from '../../pages/registrationAndLogin/RegistrationAndLogin.module.css';
-import { useState } from 'react';
 
 
 export function InputPassword({password, setPassword}) {

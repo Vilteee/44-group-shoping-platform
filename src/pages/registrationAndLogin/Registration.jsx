@@ -33,11 +33,8 @@ export function Registration() {
         const maxUserNameLength = 30;
         const minPasswordLength = 6;
         const maxPasswordLength = 100;
-        const minEmailLength = 6;
-        const maxEmailLength = 100;
 
         e.preventDefault();
-
 
        const newErrors = [];
 
@@ -64,7 +61,6 @@ export function Registration() {
         
         if ( !newErrors.length ) {
             setUsers(( prev ) => [ ...prev, { name, password, email }]);
-            // navigate("/login");
         }
     }
 

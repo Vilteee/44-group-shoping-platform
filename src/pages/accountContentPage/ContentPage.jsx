@@ -1,7 +1,6 @@
 import style from './ContentPage.module.css';
 
 
-
 export function ContentPage() {
     return (
         <>

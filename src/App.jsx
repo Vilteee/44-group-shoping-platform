@@ -26,11 +26,6 @@ function App() {
           <Route Component={LayoutAccount}>
             <Route path="/account" element={<ContentPage />} />
           </Route>
-
-          {/* <Route Component={LayoutList}>
-            <Route path="/menuList/:menuListId" element={<BurgerList />} />
-          </Route> */}
-
         </Routes>
       </BrowserRouter>
 
