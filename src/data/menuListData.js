@@ -1,5 +1,5 @@
 export const menuList= [
-    {buttonName: 'Product catalog', link: "product-catalog"},
+    {buttonName: 'Product catalog', link: 'product-catalog'},
     {buttonName: 'Shops', link: 'shops'},
     {buttonName: 'Shopping carts', link: 'shopping-carts'},
     {buttonName: 'New shopping cart', link:'new-shopping-cart' },

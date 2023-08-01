@@ -7,7 +7,7 @@ export function BurgerList() {
 
     return (
         <div className={style.burgerList}>
-            { menuList.map(item => <MenuListButton link={item.link} buttonName={item.link}/>)}
+            { menuList.map(item => <MenuListButton link={item.link} buttonName={item.buttonName}/>)}
         </div>
     )
 }

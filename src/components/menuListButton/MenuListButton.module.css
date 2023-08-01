@@ -9,3 +9,12 @@
     height: 27px;
     margin-right: 0.5rem;
 }
+
+.menuListLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.menuListLinks:hover {
+    color: rgb(93, 190, 169)
+}
