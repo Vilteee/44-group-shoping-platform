@@ -1,14 +1,12 @@
 .burgerButtonClosing {
     display: flex;
     justify-content: right;
-    margin-left: 15rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    width: 40px;
-    height: 40px;
+    margin-left: 10rem;
+    margin-top: 1rem;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
     position: relative;
-    
 }
 
 .line {
@@ -30,3 +28,5 @@
     top: 13px;
 
 }
+
+
