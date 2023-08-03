@@ -2,10 +2,12 @@ import style from './ShoppingCarts.module.css';
 
 
 
-export function ShoppingCarts() {
+
+export function ShoppingCarts({shoppingCart}) {
+    console.log(shoppingCart);
     return (
         <div>
-            SHOPPING CARTS CONTENT
+            
         </div>
     )
 }
