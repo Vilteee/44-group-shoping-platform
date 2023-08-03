@@ -1,0 +1,44 @@
+.productsWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productContainer {
+    border: 0.15rem solid rgb(153, 223, 214);
+    border-radius: 0.7rem;
+    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgb(207, 239, 232);
+    padding: 1rem 0;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+}
+
+.currencyAndPrice {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.productImg {
+    width: 150px;
+    height: 180px;
+}
+
+.borderProductContainer {
+   border: 0.12rem solid rgb(13, 197, 182);
+   width: 100%;
+   padding: 0;
+}
+
+.productTitle {
+    font-size: 1.3rem;
+}
+
+.addToCart {
+    height: 1.5rem;
+    width: 1.5rem;
+}
