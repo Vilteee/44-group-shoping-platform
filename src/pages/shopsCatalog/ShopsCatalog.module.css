@@ -1,0 +1,32 @@
+.shopsContainer {
+    display: flex;
+    margin: 1.5rem;
+    align-items: center;
+    border: 2px solid rgb(67, 199, 159);
+    border-radius: 10px;
+    
+}
+
+.shopContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopMap {
+    border-radius: 10px;
+}
+
+.shopsTitle {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    border-bottom: 0.13rem solid rgb(101, 219, 187);
+}
+.shopsTitle:hover {
+    color:rgb(67, 199, 159)
+}
+
+.shopsAdress {
+    margin-bottom: 0.5rem;
+}
