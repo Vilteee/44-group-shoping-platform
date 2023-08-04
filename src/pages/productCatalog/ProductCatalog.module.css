@@ -39,6 +39,14 @@
 }
 
 .addToCart {
-    height: 1.5rem;
-    width: 1.5rem;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    background-color: rgb(200, 245, 230);
+    border-radius: 8px;
+    border: 0.1rem solid rgb(4, 150, 101);
+    box-shadow: 0.1rem 0.1rem  rgb(205, 202, 202);
+}
+
+.addToCart:hover {
+    color: rgb(55, 183, 160);
 }

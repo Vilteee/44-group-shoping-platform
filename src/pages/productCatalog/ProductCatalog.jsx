@@ -21,7 +21,7 @@ export function ProductCatalog({setToCart}) {
                             </div>
                             <button className={style.addToCart} onClick={() => {
                                 setToCart(( prev ) => [ ...prev, product])
-                            }}></button>
+                            }}>Add</button>
 
                         </div>
                     </div>

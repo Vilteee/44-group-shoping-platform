@@ -15,14 +15,19 @@ import { ShoppingCarts } from './pages/shoppingCarts/ShoppingCarts';
 import { NewProduct } from './pages/newProduct/NewProduct';
 import { NewShop } from './pages/newShop/newShop';
 import { Settings } from './pages/settings/Settings';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
 
 function App() {
 
-  const [ shoppingCart, setShoppingCart] = useState([]);
+  const [ shoppingCart, setShoppingCart] = useState(() => JSON.parse(localStorage.getItem('shoppingCart')) || []);
+
+
+  useEffect(() => {
+      localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart))
+  }, [shoppingCart]);
 
 
   return (
