@@ -21,7 +21,6 @@ import { useState, useEffect } from 'react';
 
 
 function App() {
-
   const [ shoppingCart, setShoppingCart] = useState(() => JSON.parse(localStorage.getItem('shoppingCart')) || []);
 
 
