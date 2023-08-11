@@ -13,7 +13,8 @@ const PORT = env.parsed.SERVER_PORT;
 const app = express();
 
 const corsOptions = {
-    origin: '*',
+    origin: ['http://localhost:3000'],
+    credentials: true,
 };
 
 app.use(cors(corsOptions)); //nustatymai su kuo mes bendraujame, kas musu draugai

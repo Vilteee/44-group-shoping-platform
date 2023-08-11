@@ -15,45 +15,49 @@ import { ShoppingCarts } from './pages/shoppingCarts/ShoppingCarts';
 import { NewProduct } from './pages/newProduct/NewProduct';
 import { NewShop } from './pages/newShop/newShop';
 import { Settings } from './pages/settings/Settings';
+import { UserContextProvider } from './context/UserContext';
 import { useState, useEffect } from 'react';
 
 
 
 
 function App() {
-  const [ shoppingCart, setShoppingCart] = useState(() => JSON.parse(localStorage.getItem('shoppingCart')) || []);
+  // const [ shoppingCart, setShoppingCart] = useState(() => JSON.parse(localStorage.getItem('shoppingCart')) || []);
 
 
-  useEffect(() => {
-      localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart))
-  }, [shoppingCart]);
+  // useEffect(() => {
+  //     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart))
+  // }, [shoppingCart]);
 
 
+  
   return (
     <div className={style.app}>
-      <BrowserRouter>
-        <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route path="/feature/:featureId" element={<Feature />} />
-          <Route path="*" element={<NoPage />} />
-          <Route path="/login" element={ <Login />} />
-          <Route path="/registration" element={ <Registration />} />
-          <Route path="/terms" element={<TermsOfService /> } />
-      
-          <Route Component={LayoutAccount}>
-            <Route path="/account" element={<ContentPage />} />
-            <Route path="/product-catalog" element={<ProductCatalog setToCart={setShoppingCart}/>} />
-            <Route path="/shops" element={<ShopsCatalog />} />
-            <Route path="/new-shopping-cart" element={<NewShoppingCart />} />
-            <Route path="/shopping-carts" element={<ShoppingCarts shoppingCart={shoppingCart} />} />
-            <Route path="/new-product" element={<NewProduct />} />
-            <Route path="/new-shop" element={<NewShop />} />
-            <Route path="/settings" element={<Settings />} />
-            
-
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      < UserContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route index path="/" element={<Home />} />
+            <Route path="/feature/:featureId" element={<Feature />} />
+            <Route path="*" element={<NoPage />} />
+            <Route path="/login" element={ <Login />} />
+            <Route path="/registration" element={ <Registration />} />
+            <Route path="/terms" element={<TermsOfService /> } />
+        
+            <Route Component={LayoutAccount}>
+              <Route path="/account" element={<ContentPage />} />
+              <Route path="/product-catalog" element={<ProductCatalog />} />
+              <Route path="/shops" element={<ShopsCatalog />} />
+              <Route path="/new-shopping-cart" element={<NewShoppingCart />} />
+              <Route path="/shopping-carts" element={<ShoppingCarts  />} />
+              <Route path="/new-product" element={<NewProduct />} />
+              <Route path="/new-shop" element={<NewShop />} />
+              <Route path="/settings" element={<Settings />} />
+              
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </UserContextProvider>
+     
 
     </div>
   );

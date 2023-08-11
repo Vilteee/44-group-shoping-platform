@@ -9,7 +9,7 @@ export function CheckBox({check, setCheck}) {
                 <input type="checkbox" id="terms" onChange={()=>{setCheck(!check)}}/>
             </div>
             <div className={style.termsTitle}>
-                <label for="terms">Agree to our TOS</label>
+                <label htmlFor="terms">Agree to our TOS</label>
             </div>
             <div>
                 <Link to='/terms' className={style.termsLabel}>(read)</Link>

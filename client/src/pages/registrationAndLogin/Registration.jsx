@@ -157,6 +157,7 @@ export function Registration() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json',
                 },
                 body: JSON.stringify({
                     name,
@@ -164,7 +165,27 @@ export function Registration() {
                     password,
                 }),
             }).then(res => res.json())
-                .then(navigate("/account"));
+                .then(data => {
+                    if(data.status === 'err-list') {
+                        for (const item of data.errors) {
+                            if (item.input === 'username') {
+                                setNameErr(item.msg);
+                            }
+                            if (item.input === 'email') {
+                                setEmailErr(item.msg);
+                            }
+                            if (item.input === 'password') {
+                                setPasswordErr(item.msg);
+                            }
+                        }
+                    }
+            
+                    if (data.status === 'ok') {
+                        return navigate("/login")
+                    }
+                })
+                    .catch(err => console.error(err))
+                
         }
         
     }
